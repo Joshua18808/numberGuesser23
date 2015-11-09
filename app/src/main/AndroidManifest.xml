@@ -20,6 +20,10 @@
             android:name=".Winscreen"
             android:label="@string/title_activity_winscreen" >
         </activity>
+        <activity
+            android:name=".LoseScreen"
+            android:label="@string/title_activity_lose_screen" >
+        </activity>
     </application>
 
 </manifest>

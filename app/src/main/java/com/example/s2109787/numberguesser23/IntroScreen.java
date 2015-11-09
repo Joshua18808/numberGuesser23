@@ -14,7 +14,7 @@ import java.util.Random;
 public class IntroScreen extends AppCompatActivity {
 
    int randomNum = 0;
-
+    int tries = 5;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_screen);
@@ -35,13 +35,23 @@ public class IntroScreen extends AppCompatActivity {
             if (y == randomNum) {
                 Intent Winscreenintent = new Intent(this, Winscreen.class);
                 startActivity(Winscreenintent);
+            } else if (y != randomNum){
+                Toast.makeText(this, "You have "+ tries + " tries left", Toast.LENGTH_SHORT).show();
+                tries = tries-1;
+            if (tries == -1) {
+                Intent losescreenintent = new Intent(this, LoseScreen.class);
+                startActivity(losescreenintent);
             }
+
+            }
+
 
         } catch (Exception ex) {
             ex.printStackTrace();
             // invalid input
             Toast.makeText(this, "Invalid Input", Toast.LENGTH_LONG).show();
         }
+
     }
 
 
