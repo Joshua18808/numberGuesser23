@@ -1,24 +1,25 @@
 package com.example.s2109787.numberguesser23;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Random;
 
 public class IntroScreen extends AppCompatActivity {
 
-    @Override
-
+   int randomNum = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_screen);
-        Random rand = new Random();
-        int randomNum = rand.nextInt((100 - 1) + 1) + 1;
+         Random rand = new Random();
+         randomNum = rand.nextInt((100 - 1) + 1) + 1;
         System.out.println(randomNum);
 
     }
@@ -28,10 +29,19 @@ public class IntroScreen extends AppCompatActivity {
         EditText e = (EditText)findViewById(R.id.editText);
         String s = e.getText().toString();
         try {
-            Integer.parseInt(s);
+            int y =
+                    Integer.parseInt(s);
 
-        }catch(Exception r){}
-        if (e == randomNum){}
+            if (y == randomNum) {
+                Intent Winscreenintent = new Intent(this, Winscreen.class);
+                startActivity(Winscreenintent);
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            // invalid input
+            Toast.makeText(this, "Invalid Input", Toast.LENGTH_LONG).show();
+        }
     }
 
 
