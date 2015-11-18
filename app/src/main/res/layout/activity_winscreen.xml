@@ -15,4 +15,16 @@
         android:textSize="40dp"
         android:textColor="#66ffe4" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_below="@+id/wintext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:background="#66ffe4"
+        android:textColor="#12113d"
+        android:onClick="CLickeroni"
+        android:text="PLAY AGAIN YOU nerd" />
+
 </RelativeLayout>

@@ -12,9 +12,10 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class IntroScreen extends AppCompatActivity {
-
-   int randomNum = 0;
+    Bundle grocery = new Bundle();
+    int randomNum = 0;
     int tries = 5;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_screen);
@@ -34,6 +35,8 @@ public class IntroScreen extends AppCompatActivity {
 
             if (y == randomNum) {
                 Intent Winscreenintent = new Intent(this, Winscreen.class);
+                grocery.putInt("Tries", tries);
+                Winscreenintent.putExtra("groceries", grocery);
                 startActivity(Winscreenintent);
             } else if (y != randomNum){
                 Toast.makeText(this, "You have "+ tries + " tries left", Toast.LENGTH_SHORT).show();

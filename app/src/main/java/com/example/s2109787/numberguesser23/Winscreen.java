@@ -1,12 +1,18 @@
 package com.example.s2109787.numberguesser23;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Winscreen extends AppCompatActivity {
-
+   Bundle groceries;
+    public void CLickeroni(View source){
+        Intent IntroScreenIntent = new Intent(this, IntroScreen.class);
+        startActivity(IntroScreenIntent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

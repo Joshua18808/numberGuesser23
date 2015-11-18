@@ -16,4 +16,16 @@
         android:textColor="#66ffe4"
         android:textSize="40dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAY AGAIN YOU SCRUB"
+        android:id="@+id/button3"
+        android:layout_below="@+id/loseText"
+        android:layout_alignStart="@+id/loseText"
+        android:layout_marginTop="61dp"
+        android:background="#66ffe4"
+        android:textColor="#12113d"
+        android:onClick="Clickeroni" />
+
 </RelativeLayout>

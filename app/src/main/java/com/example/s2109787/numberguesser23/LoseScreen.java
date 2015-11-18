@@ -1,12 +1,17 @@
 package com.example.s2109787.numberguesser23;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class LoseScreen extends AppCompatActivity {
-
+    public void Clickeroni(View source){
+        Intent LoseScreenIntent = new Intent(this, LoseScreen.class);
+        startActivity(LoseScreenIntent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
