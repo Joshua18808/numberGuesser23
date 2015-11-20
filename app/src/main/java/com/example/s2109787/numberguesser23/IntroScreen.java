@@ -12,7 +12,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class IntroScreen extends AppCompatActivity {
-    Bundle grocery = new Bundle();
+
     int randomNum = 0;
     int tries = 5;
 
@@ -21,6 +21,7 @@ public class IntroScreen extends AppCompatActivity {
         setContentView(R.layout.activity_intro_screen);
          Random rand = new Random();
          randomNum = rand.nextInt((100 - 1) + 1) + 1;
+        tries = 5;
         System.out.println(randomNum);
 
     }
@@ -35,18 +36,23 @@ public class IntroScreen extends AppCompatActivity {
 
             if (y == randomNum) {
                 Intent Winscreenintent = new Intent(this, Winscreen.class);
-                grocery.putInt("Tries", tries);
-                Winscreenintent.putExtra("groceries", grocery);
+
                 startActivity(Winscreenintent);
-            } else if (y != randomNum){
-                Toast.makeText(this, "You have "+ tries + " tries left", Toast.LENGTH_SHORT).show();
+            }
+            if (y < randomNum) {
+                Toast.makeText(this, " The guess is too low. You have " + tries + " tries left", Toast.LENGTH_SHORT).show();
+                tries = tries - 1;
+            }
+            if (y > randomNum){
+                Toast.makeText(this, " The guess is too high. You have "+ tries + " tries left", Toast.LENGTH_SHORT).show();
                 tries = tries-1;
+            }
             if (tries == -1) {
                 Intent losescreenintent = new Intent(this, LoseScreen.class);
                 startActivity(losescreenintent);
             }
 
-            }
+            
 
 
         } catch (Exception ex) {
@@ -56,7 +62,10 @@ public class IntroScreen extends AppCompatActivity {
         }
 
     }
-
+    public void seretClick(View source){
+        Intent faceintent = new Intent(this, face.class);
+        startActivity(faceintent);
+    }
 
 
     @Override

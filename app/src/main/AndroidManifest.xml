@@ -24,6 +24,14 @@
             android:name=".LoseScreen"
             android:label="@string/title_activity_lose_screen" >
         </activity>
+        <activity
+            android:name=".face"
+            android:label="@string/title_activity_face"
+            android:parentActivityName=".IntroScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.s2109787.numberguesser23.IntroScreen" />
+        </activity>
     </application>
 
 </manifest>

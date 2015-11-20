@@ -9,7 +9,7 @@ import android.view.View;
 
 public class LoseScreen extends AppCompatActivity {
     public void Clickeroni(View source){
-        Intent LoseScreenIntent = new Intent(this, LoseScreen.class);
+        Intent LoseScreenIntent = new Intent(this, IntroScreen.class);
         startActivity(LoseScreenIntent);
     }
     @Override

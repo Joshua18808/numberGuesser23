@@ -1,30 +1,22 @@
 package com.example.s2109787.numberguesser23;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-public class Winscreen extends AppCompatActivity {
+public class face extends AppCompatActivity {
 
-    public void CLickeroni(View source){
-        Intent IntroScreenIntent = new Intent(this, IntroScreen.class);
-        startActivity(IntroScreenIntent);
-
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_winscreen);
+        setContentView(R.layout.activity_face);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_winscreen, menu);
+        getMenuInflater().inflate(R.menu.menu_face, menu);
         return true;
     }
 
