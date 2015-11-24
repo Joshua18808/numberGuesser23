@@ -6,26 +6,26 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.s2109787.numberguesser23.LoseScreen"
     android:id="@+id/losescreen"
-    android:background="#12113d">
+    android:background="#3d000a">
 
-    <TextView android:text="You lose!" android:layout_width="wrap_content"
+    <TextView android:text="You losah!" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/loseText"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#66ffe4"
+        android:textColor="#a00005"
         android:textSize="40dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PLAY AGAIN YOU SCRUB"
+        android:text="PLAY AGAIN you loasa"
         android:id="@+id/button3"
         android:layout_below="@+id/loseText"
         android:layout_alignStart="@+id/loseText"
         android:layout_marginTop="61dp"
-        android:background="#66ffe4"
-        android:textColor="#12113d"
+        android:background="#a00005"
+        android:textColor="#3d000a"
         android:onClick="Clickeroni" />
 
 </RelativeLayout>

@@ -40,11 +40,11 @@ public class IntroScreen extends AppCompatActivity {
                 startActivity(Winscreenintent);
             }
             if (y < randomNum) {
-                Toast.makeText(this, " The guess is too low. You have " + tries + " tries left", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, " The guess is too low. You have " + tries + " tries left", Toast.LENGTH_LONG).show();
                 tries = tries - 1;
             }
             if (y > randomNum){
-                Toast.makeText(this, " The guess is too high. You have "+ tries + " tries left", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, " The guess is too high. You have "+ tries + " tries left", Toast.LENGTH_LONG).show();
                 tries = tries-1;
             }
             if (tries == -1) {
